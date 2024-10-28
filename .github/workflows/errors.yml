@@ -1,11 +1,7 @@
-# Test the error message when the trusted publishing configuration is incorrect
+# Test the error messages when the trusted publishing configuration is incorrect
 name: Release wrong name
 
 on:
-  push:
-    tags:
-      # Publish on any tag starting with a `v`, e.g. v1.2.3
-      - v*
   workflow_dispatch:
     inputs:
       ref:
