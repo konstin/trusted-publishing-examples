@@ -20,8 +20,8 @@ jobs:
     steps:
       - if: ${{ inputs.ref }}
         uses: actions/checkout@v4
-        repository: "astral-sh/uv"
         with:
+          repository: "astral-sh/uv"
           ref: ${{ inputs.ref }}
 
       - if: ${{ inputs.ref }}
