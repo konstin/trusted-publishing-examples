@@ -153,6 +153,7 @@ jobs:
   # Fails because the environment section is missing
   pypi-missing-environment:
     name: Publish missing environment
+    needs: get-binary-linux
     runs-on: ubuntu-latest
     # Here the environment section is skipped
     # Permissions trusted publishing.
@@ -160,6 +161,13 @@ jobs:
       id-token: write
     steps:
       - uses: actions/checkout@v4
+      - name: Download uv
+        uses: actions/download-artifact@v4
+        with:
+          name: uv
+      - name: Prepare uv
+        run: chmod +x ./uv
+
       - uses: astral-sh/setup-uv@v3
       - run: ./uv build
       # Check that basic features work and we didn't miss to include crucial files
