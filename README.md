@@ -18,7 +18,8 @@ Repository: konstin/trusted-publishing-examples
 Workflow: release.yml
 Environment name: release](data/trusted-publishing-config-pypi.png)
 
-You can find the published package at https://pypi.org/project/trusted-publishing-examples/.
+You can find the published package at
+https://pypi.org/project/trusted-publishing-examples/.
 
 [.github/workflows/ci.yml](.github/workflows/ci.yml) is a minimal test and lint
 workflow for a Python package, while
